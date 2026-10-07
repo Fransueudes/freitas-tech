@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freitas Tech | Consultoria, Equipamentos e Soluções em TI no Tocantins</title>
+  <meta name="description" content="Freitas Tech - Especialistas em consultoria de TI, revenda corporativa de equipamentos, servidores, redes e infraestrutura no Tocantins. Fornecedora de excelência para empresas de grande porte como Energisa Tocantins.">
+  
+  <!-- Font Inter & Lucide Icons CDN -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+              950: '#0f172a',
+            },
+            slateCustom: {
+              850: '#151f32',
+              900: '#0f172a',
+              950: '#090e1a'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Suavização de scroll e transições */
+    body {
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 50% 30%, rgba(37, 99, 235, 0.18), transparent 70%);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 selection:bg-blue-600 selection:text-white">
+
+  <div class="bg-gradient-to-r from-blue-900 via-blue-800 to-slate-900 text-xs py-2 px-4 border-b border-blue-800/40">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-slate-300">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Atendimento corporativo e faturamento B2B em todo o <strong>Tocantins</strong></span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <a href="tel:63981001696" class="hover:text-white flex items-center gap-1 transition-colors">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-blue-400"></i>
+          (63) 98100-1696
+        </a>
+        <span class="text-slate-600">|</span>
+        <span class="flex items-center gap-1 text-slate-400">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-400"></i>
+          Palmas - TO
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-40 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-blue-700 to-cyan-500 p-0.5 shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/35 transition-all">
+          <div class="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
+            <i data-lucide="server" class="w-5 h-5 text-blue-400 group-hover:scale-110 transition-transform"></i>
+          </div>
+        </div>
+        <div>
+          <span class="text-xl font-extrabold tracking-tight text-white block leading-tight">
+            FREITAS <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">TECH</span>
+          </span>
+          <span class="text-[10px] tracking-wider text-slate-400 uppercase font-semibold block">Consultoria & TI</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#sobre" class="hover:text-blue-400 transition-colors">Sobre Nós</a>
+        <a href="#solucoes" class="hover:text-blue-400 transition-colors">Produtos & Soluções</a>
+        <a href="#clientes" class="hover:text-blue-400 transition-colors">Clientes & Cases</a>
+        <a href="#diferenciais" class="hover:text-blue-400 transition-colors">Diferenciais</a>
+      </nav>
+
+      <!-- Action Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="https://wa.me/5563981001696?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20TI%20com%20a%20Freitas%20Tech." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-lg shadow-blue-600/30 hover:shadow-blue-600/50 transition-all active:scale-95">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>Solicitar Cotação</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="mobile-toggle" aria-label="Abrir Menu" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-800 bg-slate-950 px-4 pt-3 pb-6 space-y-3">
+      <a href="#sobre" class="mobile-link block py-2 text-base font-medium text-slate-300 hover:text-blue-400">Sobre Nós</a>
+      <a href="#solucoes" class="mobile-link block py-2 text-base font-medium text-slate-300 hover:text-blue-400">Produtos & Soluções</a>
+      <a href="#clientes" class="mobile-link block py-2 text-base font-medium text-slate-300 hover:text-blue-400">Clientes & Cases</a>
+      <a href="#diferenciais" class="mobile-link block py-2 text-base font-medium text-slate-300 hover:text-blue-400">Diferenciais</a>
+      <a href="#contato" class="mobile-link block py-2 text-base font-medium text-slate-300 hover:text-blue-400">Contato</a>
+      <a href="https://wa.me/5563981001696?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o%20de%20TI." target="_blank" class="w-full mt-2 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-blue-600 text-white font-semibold text-sm">
+        <i data-lucide="phone-call" class="w-4 h-4"></i> Falar com Especialista
+      </a>
+    </div>
+  </header>
+
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden hero-glow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-950/70 border border-blue-700/40 text-blue-300 text-xs font-medium">
+            <i data-lucide="shield-check" class="w-4 h-4 text-blue-400"></i>
+            Parceira Estratégica em TI para Empresas no Tocantins
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            Tecnologia de ponta e infraestrutura para <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500">impulsionar sua empresa.</span>
+          </h1>
+
+          <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            Revenda corporativa de hardware, servidores de alta performance, cabeamento, redes e consultoria técnica especializada. Apoiamos desde operações corporativas a concessionárias de utilidade pública no estado.
+          </p>
+
+          <!-- Buttons CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <a href="https://wa.me/5563981001696?text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20para%20minha%20empresa." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-white font-bold text-base shadow-xl shadow-blue-600/25 hover:shadow-blue-600/40 transition-all transform hover:-translate-y-0.5">
+              <i data-lucide="send" class="w-5 h-5"></i>
+              <span>Fazer Cotação no WhatsApp</span>
+            </a>
+            <a href="#solucoes" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl border border-slate-700 hover:border-slate-500 bg-slate-900/60 hover:bg-slate-900 text-slate-200 font-semibold text-base transition-colors">
+              <span>Ver Linha de Produtos</span>
+              <i data-lucide="arrow-down" class="w-4 h-4 text-slate-400"></i>
+            </a>
+          </div>
+
+          <!-- Quick Metrics -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 max-w-lg mx-auto lg:mx-0">
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-blue-400">100%</div>
+              <div class="text-xs text-slate-400 mt-0.5">Atendimento Corporativo B2B</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400">Rapidez</div>
+              <div class="text-xs text-slate-400 mt-0.5">Faturamento & Logística no TO</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">Garantia</div>
+              <div class="text-xs text-slate-400 mt-0.5">Hardware Oficial e Fiscal</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Interactive Card / Visual -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-600 opacity-25 blur-xl"></div>
+            
+            <div class="relative rounded-2xl bg-slate-900/90 border border-slate-800 p-6 sm:p-8 shadow-2xl space-y-6">
+              <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+                <div class="flex items-center gap-3">
+                  <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                </div>
+                <span class="text-xs font-mono text-slate-400">Painel de Fornecimento B2B</span>
+              </div>
+
+              <!-- Destaque Case Energisa -->
+              <div class="bg-gradient-to-br from-blue-950/60 to-slate-900 border border-blue-800/50 rounded-xl p-4">
+                <div class="flex items-start gap-3">
+                  <div class="p-2.5 rounded-lg bg-blue-900/40 text-blue-400 shrink-0">
+                    <i data-lucide="zap" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">Cliente de Referência</span>
+                    <h2 class="text-base font-bold text-white">Energisa Tocantins</h2>
+                    <p class="text-xs text-slate-300 mt-1">Confiabilidade e atendimento a uma das maiores infraestruturas de distribuição de energia do estado.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick List of Supplies -->
+              <div class="space-y-3">
+                <div class="flex items-center justify-between p-3 rounded-lg bg-slate-950/60 border border-slate-800/60 text-xs text-slate-300">
+                  <span class="flex items-center gap-2"><i data-lucide="cpu" class="w-4 h-4 text-blue-400"></i> Servidores & Workstations</span>
+                  <span class="text-emerald-400 font-medium">Disponível</span>
+                </div>
+                <div class="flex items-center justify-between p-3 rounded-lg bg-slate-950/60 border border-slate-800/60 text-xs text-slate-300">
+                  <span class="flex items-center gap-2"><i data-lucide="network" class="w-4 h-4 text-cyan-400"></i> Racks, Switches & Fibra</span>
+                  <span class="text-emerald-400 font-medium">Pronta Entrega</span>
+                </div>
+                <div class="flex items-center justify-between p-3 rounded-lg bg-slate-950/60 border border-slate-800/60 text-xs text-slate-300">
+                  <span class="flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4 text-indigo-400"></i> No-Breaks Corporativos</span>
+                  <span class="text-emerald-400 font-medium">Homologados</span>
+                </div>
+              </div>
+
+              <div class="pt-2 text-center">
+                <p class="text-xs text-slate-400">Atendimento direto com consultor técnico:</p>
+                <p class="text-sm font-semibold text-white tracking-wide mt-1">(63) 98100-1696</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="clientes" class="py-12 bg-slate-900 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-blue-950/80 via-slate-900 to-slate-900 border border-blue-800/40">
+        <div class="space-y-2 text-center md:text-left">
+          <div class="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-bold text-cyan-400">
+            <i data-lucide="award" class="w-4 h-4"></i> Credibilidade Comprovada
+          </div>
+          <h2 class="text-xl sm:text-2xl font-bold text-white">Fornecedora Homologada de Grandes Operações</h2>
+          <p class="text-slate-300 text-sm max-w-xl">
+            Temos o orgulho de atender empresas de alto rigor operacional e técnico no Tocantins, com destaque para a <strong class="text-white">Energisa Tocantins</strong>, entregando suprimentos de TI, peças críticas e consultoria de infraestrutura.
+          </p>
+        </div>
+        <div class="shrink-0 flex items-center gap-4 bg-slate-950/70 px-6 py-4 rounded-xl border border-slate-800">
+          <div class="w-12 h-12 rounded-xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400">
+            <i data-lucide="zap" class="w-7 h-7"></i>
+          </div>
+          <div>
+            <div class="text-xs uppercase text-slate-400 font-medium">Cliente Principal</div>
+            <div class="text-lg font-black text-white tracking-tight">ENERGISA <span class="text-blue-400">TO</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="py-20 bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-700/30 text-blue-400 text-xs font-semibold uppercase">
+            Sobre a Freitas Tech
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+            Compromisso com prazos, conformidade e equipamentos de alta performance.
+          </h2>
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+            A <strong>Freitas Tech Consultoria e Soluções em TI</strong> nasceu para suprir a demanda corporativa do estado do Tocantins por um atendimento ágil, técnico e transparente na área de tecnologia da informação.
+          </p>
+          <p class="text-slate-400 leading-relaxed text-sm">
+            Sabemos que paradas no sistema de TI geram prejuízos significativos. Por isso, atuamos lado a lado com os setores de compras, suprimentos e TI das organizações, oferecendo faturamento facilitado para pessoa jurídica, garantia de procedência e agilidade na entrega.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="flex items-start gap-3 p-3 rounded-lg bg-slate-900 border border-slate-800">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+              <div>
+                <h3 class="text-sm font-semibold text-white">Faturamento B2B</h3>
+                <p class="text-xs text-slate-400">Condições especiais e prazos para empresas cadastradas.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3 rounded-lg bg-slate-900 border border-slate-800">
+              <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+              <div>
+                <h3 class="text-sm font-semibold text-white">Suporte Regional</h3>
+                <p class="text-xs text-slate-400">Presença no Tocantins com rápida resolução de chamados.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side Features Grid -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-600/40 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
+              <i data-lucide="file-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">NF-e e Legalidade</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">Todos os equipamentos comercializados possuem nota fiscal com impostos regulares e garantia integral dos fabricantes.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-600/40 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center mb-4">
+              <i data-lucide="truck" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Logística Eficiente</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">Rotas e parceiros que garantem o cumprimento dos prazos em Palmas e em todas as cidades do interior do Tocantins.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-600/40 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4">
+              <i data-lucide="users" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Consultoria Técnica</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">Não somos apenas vendedores: analisamos seu projeto para dimensionar o equipamento correto sem custos extras.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-blue-600/40 transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4">
+              <i data-lucide="headphones" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-base font-bold text-white mb-2">Pós-Venda Ativo</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">Acompanhamento contínuo da entrega, ativação e intermediação ágil de RMA se necessário.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="solucoes" class="py-20 bg-slate-900/60 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-700/30 text-blue-400 text-xs font-semibold uppercase">
+          Portfólio Completo de TI
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Soluções Corporativas e Equipamentos</h2>
+        <p class="text-slate-300 text-sm sm:text-base">
+          Trabalhamos com as marcas líderes mundiais em tecnologia corporativa para oferecer hardware confiável, segurança de dados e alta produtividade para o seu negócio.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Card 1: Servidores & Armazenamento -->
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 hover:border-blue-600/50 hover:shadow-xl hover:shadow-blue-900/10 transition-all flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-blue-900/30 text-blue-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="server" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">Servidores & Armazenamento (Storage)</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Servidores em torre e rack, storages NAS/SAN, memórias ECC, discos corporativos SAS/SSD e soluções de contingência para data centers.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-1.5 pt-2 border-t border-slate-900">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Servidores Dell, HPE e Lenovo</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Storages QNAP e Synology</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-blue-400"></i> Upgrades homologados</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="https://wa.me/5563981001696?text=Gostaria%20de%20cotar%20Servidores%20e%20Storage" class="text-xs font-semibold text-blue-400 hover:text-blue-300 inline-flex items-center gap-1.5">
+              Cotar Servidores <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: Redes e Conectividade -->
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 hover:border-blue-600/50 hover:shadow-xl hover:shadow-blue-900/10 transition-all flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-900/30 text-cyan-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="network" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">Redes, Cabeamento & Racks</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Infraestrutura de rede empresarial, switches gerenciáveis L2/L3, roteadores corporativos, cabos Cat6/Cat6A, patch panels e racks 19".
+            </p>
+            <ul class="text-xs text-slate-300 space-y-1.5 pt-2 border-t border-slate-900">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Cisco, Ubiquiti, Mikrotik, TP-Link Omada</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Racks padrão servidor e telecom</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Transceivers SFP e fibra óptica</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="https://wa.me/5563981001696?text=Gostaria%20de%20cotar%20equipamentos%20de%20Rede%20e%20Cabeamento" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1.5">
+              Cotar Redes <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Desktops, Laptops & Workstations -->
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 hover:border-blue-600/50 hover:shadow-xl hover:shadow-blue-900/10 transition-all flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-indigo-900/30 text-indigo-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="laptop" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">Computadores & Laptops B2B</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Equipamentos de alta durabilidade para colaboradores, estações gráficas de engenharia, notebooks corporativos com chip de segurança TPM.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-1.5 pt-2 border-t border-slate-900">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Linhas corporativas (Dell Vostro/Latitude, Lenovo ThinkPad)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Workstations para CAD e modelagem</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-indigo-400"></i> Monitores profissionais duplos/ultrawide</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="https://wa.me/5563981001696?text=Gostaria%20de%20cotar%20Notebooks%20e%20Computadores" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 inline-flex items-center gap-1.5">
+              Cotar PCs e Laptops <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: Energia & No-breaks (UPS) -->
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 hover:border-blue-600/50 hover:shadow-xl hover:shadow-blue-900/10 transition-all flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-amber-900/30 text-amber-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="battery-charging" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">No-Breaks (UPS) & Energia</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Proteção contra oscilações de rede elétrica e apagões. No-breaks online de dupla conversão, bancos de baterias e réguas PDU para racks.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-1.5 pt-2 border-t border-slate-900">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> No-breaks senoidais puros 1kVA a 20kVA</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> APC, SMS Legrand e NHS</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-amber-400"></i> Módulos de expansão de autonomia</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="https://wa.me/5563981001696?text=Gostaria%20de%20cotar%20No-breaks%20e%20Energia" class="text-xs font-semibold text-amber-400 hover:text-amber-300 inline-flex items-center gap-1.5">
+              Cotar No-breaks <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 5: Periféricos & Impressão -->
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 hover:border-blue-600/50 hover:shadow-xl hover:shadow-blue-900/10 transition-all flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-900/30 text-purple-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="printer" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">Impressão & Periféricos</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Suprimentos para escritórios modernos: impressoras multifuncionais corporativas laser e tanque, toners originais, leitor de código de barras e headsets.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-1.5 pt-2 border-t border-slate-900">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> HP, Brother, Epson e Kyocera</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Teclados, mouses e webcams para videoconferência</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Toners e suprimentos originais de fábrica</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="https://wa.me/5563981001696?text=Gostaria%20de%20cotar%20Impressoras%20e%20Perif%C3%A9ricos" class="text-xs font-semibold text-purple-400 hover:text-purple-300 inline-flex items-center gap-1.5">
+              Cotar Periféricos <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 6: Licenciamento e Consultoria -->
+        <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 hover:border-blue-600/50 hover:shadow-xl hover:shadow-blue-900/10 transition-all flex flex-col justify-between group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-900/30 text-emerald-400 flex items-center justify-center group-hover:scale-110 transition-transform">
+              <i data-lucide="shield-check" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white">Consultoria & Licenciamento</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Regularização de softwares e consultoria em projetos. Licenciamento oficial Microsoft CSP, soluções de backup em nuvem e antivírus corporativo com painel central.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-1.5 pt-2 border-t border-slate-900">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Microsoft 365 & Windows Server CAL</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Kaspersky, ESET, Bitdefender Endpoint</li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Planejamento de migração e upgrade de TI</li>
+            </ul>
+          </div>
+          <div class="pt-6">
+            <a href="https://wa.me/5563981001696?text=Gostaria%20de%20saber%20mais%20sobre%20Consultoria%20e%20Licenciamento" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 inline-flex items-center gap-1.5">
+              Consultar Especialista <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-20 bg-slate-950 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="rounded-3xl bg-gradient-to-b from-slate-900 to-slate-950 border border-blue-900/40 p-8 sm:p-12 relative shadow-2xl">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/40 border border-blue-600/40 text-blue-300 text-xs font-semibold mb-6">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Caso de Atendimento
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight mb-4">
+            Energisa Tocantins: Atendimento a uma infraestrutura crítica do estado.
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+            O setor elétrico exige disponibilidade imediata, conformidade fiscal rigorosa e produtos de procedência garantida. A <strong class="text-white">Freitas Tech</strong> fornece soluções e materiais de tecnologia da informação atendendo as demandas da Energisa no Tocantins, com pontualidade na entrega e foco em manter as operações corporativas rodando com total estabilidade.
+          </p>
+          
+          <div class="grid sm:grid-cols-3 gap-6 pt-4 border-t border-slate-800">
+            <div>
+              <p class="text-xs text-slate-400 font-medium">Exigência</p>
+              <p class="text-sm font-bold text-white mt-1">SLA e Rigor Técnico</p>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400 font-medium">Segmento</p>
+              <p class="text-sm font-bold text-white mt-1">Concessionária de Energia</p>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400 font-medium">Escopo</p>
+              <p class="text-sm font-bold text-white mt-1">Equipamentos & TI B2B</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contato" class="py-20 bg-slate-900/80 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid lg:grid-cols-12 gap-12">
+        
+        <!-- Left Side: Contact Information -->
+        <div class="lg:col-span-5 space-y-8">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-700/30 text-blue-400 text-xs font-semibold uppercase mb-3">
+              Fale com um Consultor
+            </div>
+            <h2 class="text-3xl font-extrabold text-white">Solicite sua Cotação ou Proposta Técnica</h2>
+            <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+              Precisa de peças, novos computadores, cabeamento ou estruturação de rede para sua empresa? Envie sua lista ou entre em contato direto pelo WhatsApp.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Telefone / WhatsApp -->
+            <a href="https://wa.me/5563981001696?text=Ol%C3%A1!%20Gostaria%20de%20uma%20cota%C3%A7%C3%A3o%20de%20TI." target="_blank" class="flex items-center gap-4 p-4 rounded-xl bg-slate-950 border border-slate-800 hover:border-blue-600 transition-colors group">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                <i data-lucide="phone" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block font-medium">WhatsApp / Telefone Direto</span>
+                <span class="text-base font-bold text-white group-hover:text-emerald-400 transition-colors">(63) 98100-1696</span>
+              </div>
+            </a>
+
+            <!-- Localização -->
+            <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center shrink-0">
+                <i data-lucide="map-pin" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block font-medium">Área de Atendimento</span>
+                <span class="text-sm font-bold text-white">Palmas e todo o Estado do Tocantins</span>
+              </div>
+            </div>
+
+            <!-- Horário -->
+            <div class="flex items-center gap-4 p-4 rounded-xl bg-slate-950 border border-slate-800">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center shrink-0">
+                <i data-lucide="clock" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <span class="text-xs text-slate-400 block font-medium">Horário de Atendimento Corporativo</span>
+                <span class="text-sm font-bold text-white">Segunda a Sexta-feira: 08:00 às 18:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Fast Quotation Form -->
+        <div class="lg:col-span-7">
+          <div class="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 shadow-xl">
+            <h3 class="text-xl font-bold text-white mb-2">Simulador de Pedido / Solicitação Rápida</h3>
+            <p class="text-xs text-slate-400 mb-6">Preencha os dados abaixo para direcionarmos seu pedido com a mensagem formatada para o consultor.</p>
+
+            <form id="quote-form" class="space-y-4">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="client-name" class="block text-xs font-semibold text-slate-300 mb-1">Seu Nome / Responsável *</label>
+                  <input type="text" id="client-name" required placeholder="Ex: Roberto Silva" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                </div>
+                <div>
+                  <label for="company-name" class="block text-xs font-semibold text-slate-300 mb-1">Nome da Empresa / Órgão *</label>
+                  <input type="text" id="company-name" required placeholder="Ex: Minha Empresa Ltda" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                </div>
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="client-city" class="block text-xs font-semibold text-slate-300 mb-1">Cidade (no Tocantins) *</label>
+                  <input type="text" id="client-city" required placeholder="Ex: Palmas, Araguaína, Gurupi..." class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                </div>
+                <div>
+                  <label for="demand-category" class="block text-xs font-semibold text-slate-300 mb-1">Categoria de Interesse *</label>
+                  <select id="demand-category" class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                    <option value="Hardware e Servidores">Hardware & Servidores</option>
+                    <option value="Equipamentos de Rede e Cabos">Equipamentos de Rede & Racks</option>
+                    <option value="Laptops e Computadores">Notebooks e Desktops Corporativos</option>
+                    <option value="No-Breaks e Energia">No-Breaks & Energia</option>
+                    <option value="Impressoras e Suprimentos">Impressão & Periféricos</option>
+                    <option value="Consultoria e Licenciamento">Consultoria de TI & Licenças</option>
+                    <option value="Outros">Outras demandas</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="demand-details" class="block text-xs font-semibold text-slate-300 mb-1">Descrição do que precisa (quantidades ou especificações)</label>
+                <textarea id="demand-details" rows="3" placeholder="Ex: Cotação para 5 computadores Core i5, 1 switch gigabit de 24 portas e 2 no-breaks 1400VA..." class="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"></textarea>
+              </div>
+
+              <!-- Feedback message area -->
+              <div id="form-msg" class="hidden text-xs p-3 rounded-lg"></div>
+
+              <button type="submit" class="w-full py-3.5 px-6 rounded-xl bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-bold text-sm shadow-lg shadow-blue-600/30 flex items-center justify-center gap-2 transition-all">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Enviar para o WhatsApp da Freitas Tech</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="bg-slate-950 border-t border-slate-800 text-slate-400 text-xs py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-900">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-lg bg-blue-600 flex items-center justify-center text-white">
+            <i data-lucide="server" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <span class="text-base font-bold text-white block">FREITAS TECH</span>
+            <span class="text-[10px] text-slate-400">Consultoria e Soluções em TI</span>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-6 text-slate-400">
+          <a href="#sobre" class="hover:text-blue-400 transition-colors">Sobre</a>
+          <a href="#solucoes" class="hover:text-blue-400 transition-colors">Produtos</a>
+          <a href="#clientes" class="hover:text-blue-400 transition-colors">Clientes</a>
+          <a href="#contato" class="hover:text-blue-400 transition-colors">Contato</a>
+          <a href="https://wa.me/5563981001696" target="_blank" class="hover:text-blue-400 transition-colors">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left text-[11px] text-slate-400">
+        <p>© 2026 Freitas Tech Consultoria e Soluções em TI. Todos os direitos reservados. Tocantins - Brasil.</p>
+        <p class="flex items-center justify-center gap-1">
+          <i data-lucide="shield" class="w-3.5 h-3.5 text-blue-400"></i> Revenda e Faturamento Corporativo B2B
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5563981001696?text=Ol%C3%A1!%20Encontrei%20o%20site%20da%20Freitas%20Tech%20e%20gostaria%20de%20solicitar%20uma%20cota%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp" class="fixed bottom-6 right-6 z-50 flex items-center gap-2.5 px-4 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full shadow-2xl shadow-emerald-500/40 hover:scale-105 active:scale-95 transition-all group">
+    <div class="relative flex items-center justify-center">
+      <i data-lucide="message-circle" class="w-6 h-6 fill-current"></i>
+      <span class="absolute -top-1 -right-1 flex h-3 w-3">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-300 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+      </span>
+    </div>
+    <span class="hidden sm:inline-block font-bold text-sm tracking-wide">Falar no WhatsApp</span>
+  </a>
+
+  <script>
+    // Inicialização dos ícones Lucide
+    lucide.createIcons();
+
+    // Menu Mobile Toggle
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    mobileToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Manipulador do Formulário de Cotação Direcionando ao WhatsApp Oficial
+    const quoteForm = document.getElementById('quote-form');
+    const formMsg = document.getElementById('form-msg');
+
+    quoteForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('client-name').value.trim();
+      const company = document.getElementById('company-name').value.trim();
+      const city = document.getElementById('client-city').value.trim();
+      const category = document.getElementById('demand-category').value;
+      const details = document.getElementById('demand-details').value.trim();
+
+      if (!name || !company || !city) {
+        formMsg.className = "text-xs p-3 rounded-lg bg-red-950 border border-red-800 text-red-300 block";
+        formMsg.textContent = "Por favor, preencha os campos obrigatórios (*).";
+        return;
+      }
+
+      // Montando mensagem estruturada para o WhatsApp
+      let text = `*SOLICITAÇÃO DE COTAÇÃO - FREITAS TECH*\n\n`;
+      text += `👤 *Nome:* ${name}\n`;
+      text += `🏢 *Empresa:* ${company}\n`;
+      text += `📍 *Cidade:* ${city} (TO)\n`;
+      text += `📦 *Categoria:* ${category}\n`;
+      if (details) {
+        text += `📝 *Detalhes:* ${details}\n`;
+      }
+      text += `\n_Enviado pelo formulário do site oficial_`;
+
+      const encodedText = encodeURIComponent(text);
+      const whatsappUrl = `https://wa.me/5563981001696?text=${encodedText}`;
+
+      formMsg.className = "text-xs p-3 rounded-lg bg-emerald-950 border border-emerald-800 text-emerald-300 block";
+      formMsg.textContent = "Redirecionando para o WhatsApp da Freitas Tech...";
+
+      setTimeout(() => {
+        window.open(whatsappUrl, '_blank');
+      }, 700);
+    });
+  </script>
+</body>
+</html>
